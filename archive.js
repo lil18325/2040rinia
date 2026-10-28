@@ -9,7 +9,7 @@ const SCULPTURES = [
         name: "透明ディスプレイ",
         image: "images/image-01.png",
         area: "2040年の橋本",
-        author: "リニア中央新幹線開発チーム",
+        // author: "リニア中央新幹線開発チーム",
         story: "リニアの時刻表や自分の予定などが透明ディスプレイで見れるように",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "べんとう"
@@ -19,7 +19,7 @@ const SCULPTURES = [
         name: "エンタメロボ",
         image: "images/image-02.png",
         area: "2040年の橋本",
-        author: "YAMAHA Mobilit.E.S",
+        // author: "YAMAHA Mobilit.E.S",
         story: "人を楽しませることに特化したロボ。彼はラップが得意。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "おんがく"
@@ -29,7 +29,7 @@ const SCULPTURES = [
         name: "ドローンの荷物運び",
         image: "images/image-03.png",
         area: "2040年の橋本",
-        author: "緑区都市デザイン課",
+        // author: "緑区都市デザイン課",
         story: "重い荷物もあっという間に届けてくれます。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "にんじん"
@@ -39,7 +39,7 @@ const SCULPTURES = [
         name: "荷物もちロボ",
         image: "images/image-04.png",
         area: "2040年の橋本",
-        author: "橋本歴史保存会",
+        // author: "橋本歴史保存会",
         story: "人は多くの荷物を手に持ちながら移動する必要がなくなった。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "てがみ"
@@ -49,7 +49,7 @@ const SCULPTURES = [
         name: "相棒ロボ",
         image: "images/image-05.png",
         area: "2040年の橋本",
-        author: "環境アートプロジェクト",
+        // author: "環境アートプロジェクト",
         story: "ヒト一人につきロボット一体。個人の理想のロボットを相棒にしている。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "ふうりん"
@@ -59,7 +59,7 @@ const SCULPTURES = [
         name: "専用車両ロボ",
         image: "images/image-06.png",
         area: "2040年の橋本",
-        author: "橋本スカイテラス設計室",
+        // author: "橋本スカイテラス設計室",
         story: "リニアにはロボット専用車両がある。目的地に着くとロボットも一緒に降車して人についていく。リニア内でロボットが幅をとることもなく、目的地にもロボットを連れていくことが可能である。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "こーひー"
@@ -69,8 +69,8 @@ const SCULPTURES = [
         name: "食事提供ロボ",
         image: "images/image-07.png",
         area: "2040年の橋本",
-        author: "2040未来ビジョン",
-        story: "栄養抜群な食事を作っってくれる。盛り付けだってお手のもの。",
+        // author: "2040未来ビジョン",
+        story: "栄養抜群な食事を作ってくれる。盛り付けだってお手のもの。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "ゆびわ"
     },
@@ -79,7 +79,7 @@ const SCULPTURES = [
         name: "庭師ロボ",
         image: "images/image-08.png",
         area: "2040年の橋本",
-        author: "橋本スカイテラス設計室",
+        // author: "橋本スカイテラス設計室",
         story: "彼の手にかかれば手の込んだ木々のお手入れも一瞬です。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "こーひー"
@@ -89,7 +89,7 @@ const SCULPTURES = [
         name: "農作業ロボ",
         image: "images/image-09.png",
         area: "2040年の橋本",
-        author: "2040未来ビジョン",
+        // author: "2040未来ビジョン",
         story: "農作業をサポートしてくれる。水やり特化型や雑草除去特化型などタイプは様々。農作業ロボの導入は市が補助してくれている。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "ゆびわ"
@@ -128,7 +128,7 @@ function openPopup(id) {
     document.getElementById("popTitle").textContent = item.name;
     document.getElementById("popImg").src = item.image;
     document.getElementById("popArea").textContent = item.area;
-    document.getElementById("popAuthor").textContent = item.author;
+    // document.getElementById("popAuthor").textContent = item.author;
     document.getElementById("popStory").textContent = item.story;
     document.getElementById("popLink").href = item.link;
 
