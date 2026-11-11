@@ -7,7 +7,7 @@ const SCULPTURES = [
     {
         id: 1,
         name: "透明ディスプレイ",
-        image: "images/image-01.png",
+        image: "images/pace-01.png",
         area: "2040年の橋本",
         // author: "リニア中央新幹線開発チーム",
         story: "リニアの時刻表や自分の予定などが透明ディスプレイで見れるように",
@@ -17,7 +17,7 @@ const SCULPTURES = [
     {
         id: 2,
         name: "エンタメロボ",
-        image: "images/image-02.png",
+        image: "images/pace-02.png",
         area: "2040年の橋本",
         // author: "YAMAHA Mobilit.E.S",
         story: "人を楽しませることに特化したロボ。彼はラップが得意。",
@@ -27,7 +27,7 @@ const SCULPTURES = [
     {
         id: 3,
         name: "ドローンの荷物運び",
-        image: "images/image-03.png",
+        image: "images/pace-03.png",
         area: "2040年の橋本",
         // author: "緑区都市デザイン課",
         story: "重い荷物もあっという間に届けてくれます。",
@@ -37,7 +37,7 @@ const SCULPTURES = [
     {
         id: 4,
         name: "荷物もちロボ",
-        image: "images/image-04.png",
+        image: "images/pace-04.png",
         area: "2040年の橋本",
         // author: "橋本歴史保存会",
         story: "人は多くの荷物を手に持ちながら移動する必要がなくなった。",
@@ -47,7 +47,7 @@ const SCULPTURES = [
     {
         id: 5,
         name: "相棒ロボ",
-        image: "images/image-05.png",
+        image: "images/pace-05.png",
         area: "2040年の橋本",
         // author: "環境アートプロジェクト",
         story: "ヒト一人につきロボット一体。個人の理想のロボットを相棒にしている。",
@@ -57,7 +57,7 @@ const SCULPTURES = [
     {
         id: 6,
         name: "専用車両ロボ",
-        image: "images/image-06.png",
+        image: "images/pace-06.png",
         area: "2040年の橋本",
         // author: "橋本スカイテラス設計室",
         story: "リニアにはロボット専用車両がある。目的地に着くとロボットも一緒に降車して人についていく。リニア内でロボットが幅をとることもなく、目的地にもロボットを連れていくことが可能である。",
@@ -67,7 +67,7 @@ const SCULPTURES = [
     {
         id: 7,
         name: "食事提供ロボ",
-        image: "images/image-07.png",
+        image: "images/pace-07.png",
         area: "2040年の橋本",
         // author: "2040未来ビジョン",
         story: "栄養抜群な食事を作ってくれる。盛り付けだってお手のもの。",
@@ -77,7 +77,7 @@ const SCULPTURES = [
     {
         id: 8,
         name: "庭師ロボ",
-        image: "images/image-08.png",
+        image: "images/pace-08.png",
         area: "2040年の橋本",
         // author: "橋本スカイテラス設計室",
         story: "彼の手にかかれば手の込んだ木々のお手入れも一瞬です。",
@@ -87,7 +87,7 @@ const SCULPTURES = [
     {
         id: 9,
         name: "農作業ロボ",
-        image: "images/image-09.png",
+        image: "images/pace-09.png",
         area: "2040年の橋本",
         // author: "2040未来ビジョン",
         story: "農作業をサポートしてくれる。水やり特化型や雑草除去特化型などタイプは様々。農作業ロボの導入は市が補助してくれている。",
