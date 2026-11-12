@@ -332,9 +332,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     .complete-btn:hover { background: #0b7a70; }
     .complete-btn:active { transform: translateY(2px); }
-    .stamp-grid.all-cleared .stamp-item.unlocked {
-        box-shadow: 0 0 0 2px #0D8B80, 2px 2px 8px rgba(13, 139, 128, 0.45);
-    }
 
     /* --- エンディング動画モーダル --- */
     .ed-video-overlay {
