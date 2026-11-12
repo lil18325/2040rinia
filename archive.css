@@ -3,8 +3,6 @@
 :root {
     --content-width: 402px;
     --ink: #1a1a1a;
-    --white: #fff;
-    --mobileites: #0D8B80;
     --primary: #0D8B80;
 }
 
@@ -16,10 +14,6 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-li {
-    list-style-type: none;
 }
 
 body {
@@ -48,44 +42,30 @@ main {
     z-index: 10;
     background-color: #fff;
     padding-bottom: 50px;
-    /* ボタンの下（画面の一番下）に白い余白を確保 */
     box-sizing: border-box;
 }
 
-/*=========================================================
-#header
-=========================================================*/
-header {
-    position: relative;
-    z-index: 3;
-    height: 62px;
-    background: url("../images/headerimage.png") center / cover no-repeat;
-}
-
-header h1 {
-    width: 100%;
-}
-
-#header0 img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 /* =========================================
-   エリア名バナー（斜めストライプ）
+   エリア名バナー
 ========================================= */
 .area-banner {
-    background: repeating-linear-gradient(-60deg, #0b7a70, #0b7a70 6px, #119286 12px, #119286 24px);
-    color: #ffffff;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    padding: 16px 0;
-    font-family: serif;
+    width: 100%;
+    padding: 16px 23px 25px;
+    display: flex;
+    justify-content: center;
+    background-color: #87ecf9;
     position: relative;
     z-index: 10;
+    margin-bottom: 25px;
+}
+
+.area-banner img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2568 / 644;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 /* =========================================
@@ -135,17 +115,13 @@ article {
 .stamp-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 12px; */
     margin-bottom: 40px;
 }
 
 .stamp-item {
     position: relative;
     aspect-ratio: 1 / 1;
-    /*border-radius: 3px;*/
-    /* ドロップシャドウだけを残します */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
     overflow: hidden;
     cursor: pointer;
     display: flex;
@@ -155,7 +131,6 @@ article {
 
 .stamp-item.unlocked {
     background-color: #fff;
-    /* 解放時の背景白は維持 */
 }
 
 .stamp-no {
@@ -166,7 +141,6 @@ article {
     font-weight: bold;
     z-index: 2;
     color: #111;
-    /* 鍵画像と同化しないように文字に白フチ（シャドウ）をつけています */
     text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
@@ -247,14 +221,10 @@ article {
     left: 50%;
     transform: translateX(-50%);
     width: min(100%, var(--content-width));
-    /* 見切れ防止・スクロール設定 */
     max-height: 85vh;
-    /* 高さを画面の85%までに制限（必須） */
     max-height: 85dvh;
-    /* スマホのUIを考慮した高さ指定 */
     overflow-y: auto;
-    /* 画面に収まらない場合は内部をスクロールさせる */
-    background: #e9e7e0 url("../images/map_backimage.png") center top / cover;
+    background: #ffffff;
     border-radius: 20px 20px 0 0;
     padding: 30px 24px;
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
@@ -264,14 +234,9 @@ article {
     flex-direction: column;
 }
 
-/* ポップアップ表示時 */
-.popup-content.show {
-    transform: translate(-50%, 0);
-    /* 下からスライドして表示 */
-}
-
 .popup-content.show {
     bottom: 0;
+    transform: translate(-50%, 0);
 }
 
 .popup-close-x {
@@ -285,48 +250,25 @@ article {
     cursor: pointer;
 }
 
-/* ▼ スマホ用（画面下にくっつく「ボトムシート」型の表示） */
 @media (max-width: 480px) {
     .popup-content {
         top: auto;
-        /* topの指定を解除 */
         bottom: 0;
-        /* 画面の真下に固定 */
         left: 0;
         width: 100%;
-        /* 横幅を画面いっぱいに */
         border-radius: 20px 20px 0 0;
-        /* 上の角だけ丸くする */
-
-        /* 表示アニメーション（下からスライド） */
         transform: translateY(100%);
         transition: transform 0.3s ease-out;
     }
 
     .popup-content.show {
         transform: translateY(0);
-        /* クラスが付いたら元の位置(0)へ */
     }
 }
-
 
 /* =========================================
    ポップアップ（コンテンツ詳細）
 ========================================= */
-/* --- ポップアップ内の各項目区切り線（エリア・作者の下） --- */
-.popup-info .info-group {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #79685b;
-    /* 1pxの区切り線（落ち着いたダークブラウン系） */
-}
-
-/* 最後の「架空のストーリー」グループ自体は下線を消して余白を調整 */
-.popup-info .info-group.no-border {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
 .popup-header {
     margin-bottom: 20px;
 }
@@ -362,11 +304,6 @@ article {
 
 .info-group {
     padding: 12px 0;
-    border-bottom: 1px solid #c4c4c4;
-}
-
-.info-group.no-border {
-    border-bottom: none;
 }
 
 .info-label {
@@ -375,62 +312,28 @@ article {
     color: #333;
 }
 
-.info-val {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 4px;
-    color: #111;
-}
-
-/* --- 架空のストーリーのボックス --- */
-.story-box {
+.story-text {
     margin-top: 8px;
-    padding: 14px 16px;
-    background-color: #ffffff;
-    border: 1px solid #79685b;
-    /* 1pxの枠線 */
-    border-radius: 10px;
-    /* 角丸 */
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
-    /* 指定のインナーシャドー (2, 2, 4) */
-    box-sizing: border-box;
-}
-
-/* ストーリー内の文章スタイル微調整 */
-.story-box p {
     font-size: 13px;
     line-height: 1.6;
     color: #1a1a1a;
-    margin: 0;
 }
 
 /* =========================================
    ボタンエリア
 ========================================= */
-.popup-buttons {
-    margin-top: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-/* --- ボタンエリア共通設定 --- */
 .button-group {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* ボタン同士の間隔 */
     padding: 20px 24px;
-    /* 内側の余白をポップアップと統一 */
     margin: 24px 0 0 0;
     box-sizing: border-box;
 }
 
-/* ポップアップ内のボタンエリアも同じパディング・ギャップを適用 */
 .button-group.popup-buttons {
     margin-top: 16px;
     padding: 0;
-    /* ポップアップ容器自体にパディングがあるため0に調整 */
 }
 
 .btn-outline {
@@ -440,7 +343,6 @@ article {
     justify-content: center;
     width: 100%;
     padding: 12px 16px;
-    /* ポップアップと共通のパディング */
     border: 2px solid #0D8B80;
     border-radius: 50px;
     background-color: #ffffff;
@@ -471,30 +373,4 @@ article {
     font-size: 10px;
     font-weight: bold;
     margin-top: 4px;
-}
-
-
-/*=========================================================
-#背景装飾
-=========================================================*/
-.bg-decorations {
-    position: fixed;
-    width: 100%;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: .3;
-}
-
-.decor-img {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.header-grad {
-    top: 0;
-    left: 0;
-    width: 100%;
 }

@@ -8,28 +8,20 @@ const SCULPTURES = [
         id: 1,
         name: "透明ディスプレイ",
         image: "images/pace-01.png",
-        area: "2040年の橋本",
-        // author: "リニア中央新幹線開発チーム",
         story: "リニアの時刻表や自分の予定などが透明ディスプレイで見れるように",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "べんとう"
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 2,
         name: "エンタメロボ",
         image: "images/pace-02.png",
-        area: "2040年の橋本",
-        // author: "YAMAHA Mobilit.E.S",
         story: "人を楽しませることに特化したロボ。彼はラップが得意。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "おんがく"
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 3,
         name: "ドローンの荷物運び",
         image: "images/pace-03.png",
-        area: "2040年の橋本",
-        // author: "緑区都市デザイン課",
         story: "重い荷物もあっという間に届けてくれます。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
         keyword: "にんじん"
@@ -38,65 +30,47 @@ const SCULPTURES = [
         id: 4,
         name: "荷物もちロボ",
         image: "images/pace-04.png",
-        area: "2040年の橋本",
-        // author: "橋本歴史保存会",
         story: "人は多くの荷物を手に持ちながら移動する必要がなくなった。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "てがみ"
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 5,
         name: "相棒ロボ",
         image: "images/pace-05.png",
-        area: "2040年の橋本",
-        // author: "環境アートプロジェクト",
         story: "ヒト一人につきロボット一体。個人の理想のロボットを相棒にしている。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "ふうりん"
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 6,
         name: "専用車両ロボ",
         image: "images/pace-06.png",
-        area: "2040年の橋本",
-        // author: "橋本スカイテラス設計室",
         story: "リニアにはロボット専用車両がある。目的地に着くとロボットも一緒に降車して人についていく。リニア内でロボットが幅をとることもなく、目的地にもロボットを連れていくことが可能である。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "こーひー"
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 7,
-        name: "食事提供ロボ",
-        image: "images/pace-07.png",
-        area: "2040年の橋本",
-        // author: "2040未来ビジョン",
-        story: "栄養抜群な食事を作ってくれる。盛り付けだってお手のもの。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "ゆびわ"
+        name: "庭師ロボ",
+        image: "images/pace-08.png",
+        story: "彼の手にかかれば手の込んだ木々のお手入れも一瞬です。",
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 8,
-        name: "庭師ロボ",
-        image: "images/pace-08.png",
-        area: "2040年の橋本",
-        // author: "橋本スカイテラス設計室",
-        story: "彼の手にかかれば手の込んだ木々のお手入れも一瞬です。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "こーひー"
+        name: "食事提供ロボ",
+        image: "images/pace-07.png",
+        story: "栄養抜群な食事を作ってくれる。盛り付けだってお手のもの。",
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 9,
         name: "農作業ロボ",
         image: "images/pace-09.png",
-        area: "2040年の橋本",
-        // author: "2040未来ビジョン",
         story: "農作業をサポートしてくれる。水やり特化型や雑草除去特化型などタイプは様々。農作業ロボの導入は市が補助してくれている。",
-        link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "ゆびわ"
+        link: "https://www.yamaha-motor.co.jp/mobilites/"
     }
 ];
 
-// 解放済みの彫刻IDを保存するためのキー
+// 解放済みのIDを保存するためのキー
 const STORAGE_KEY = "hashimoto-unlocked-area1";
 let unlockedSet = new Set();
 
@@ -127,8 +101,6 @@ function openPopup(id) {
     document.getElementById("popNo").textContent = `No.${item.id}`;
     document.getElementById("popTitle").textContent = item.name;
     document.getElementById("popImg").src = item.image;
-    document.getElementById("popArea").textContent = item.area;
-    // document.getElementById("popAuthor").textContent = item.author;
     document.getElementById("popStory").textContent = item.story;
     document.getElementById("popLink").href = item.link;
 
@@ -203,25 +175,38 @@ window.addEventListener("DOMContentLoaded", () => {
     if (unlockId && !isNaN(unlockId) && unlockId >= 1 && unlockId <= TOTAL_ITEMS) {
         if (!unlockedSet.has(unlockId)) {
             const targetItem = SCULPTURES.find(s => s.id === unlockId);
-            
-            // キーワード入力なしでそのまま解放
-            unlockedSet.add(unlockId);
-            saveUnlocked(unlockedSet);
-            renderGrid();
 
-            const itemName = targetItem ? targetItem.name : "記録";
-            setTimeout(() => showToast(`${itemName} が解放されました！`), 300);
+            if (targetItem && targetItem.keyword) {
+                setTimeout(() => {
+                    const userInput = window.prompt(`【${targetItem.name}】\nキーワードを入力してください：`);
+
+                    if (userInput === targetItem.keyword) {
+                        unlockedSet.add(unlockId);
+                        saveUnlocked(unlockedSet);
+                        renderGrid();
+                        setTimeout(() => showToast(`${targetItem.name} が解放されました！`), 300);
+                    } else if (userInput !== null && userInput !== "") {
+                        alert("キーワードが違います。もう一度お試しください。");
+                    }
+                }, 100);
+            } else {
+                unlockedSet.add(unlockId);
+                saveUnlocked(unlockedSet);
+                renderGrid();
+
+                const itemName = targetItem ? targetItem.name : "記録";
+                setTimeout(() => showToast(`${itemName} が解放されました！`), 300);
+            }
         } else {
             setTimeout(() => showToast("この記録は既に解放されています。"), 500);
         }
 
-        // URLから ?unlock=2 などのパラメータを除去してスッキリさせる
         window.history.replaceState({}, document.title, window.location.pathname);
     }
 });
 
 /* =========================================================
-    コンプリート演出
+    コンプリート演出 ＆ エンディング動画（ED.mp4）再生
 ========================================================= */
 (function () {
     const style = document.createElement("style");
@@ -350,6 +335,58 @@ window.addEventListener("DOMContentLoaded", () => {
     .stamp-grid.all-cleared .stamp-item.unlocked {
         box-shadow: 0 0 0 2px #0D8B80, 2px 2px 8px rgba(13, 139, 128, 0.45);
     }
+
+    /* --- エンディング動画モーダル --- */
+    .ed-video-overlay {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.92);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+        z-index: 2002;
+        padding: 20px;
+    }
+    .ed-video-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .ed-video-wrapper {
+        position: relative;
+        width: min(100%, 402px);
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        border: 2px solid #0D8B80;
+    }
+    .ed-video-wrapper video {
+        display: block;
+        width: 100%;
+        max-height: 75vh;
+        max-height: 75dvh;
+        background: #000;
+    }
+    .ed-video-close-btn {
+        margin-top: 18px;
+        padding: 12px 32px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        background: #0D8B80;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    .ed-video-close-btn:hover {
+        background: #0b7a70;
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .complete-card, .complete-seal { animation: none; transition: opacity .3s ease; }
     }
@@ -428,6 +465,38 @@ window.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(frame);
     }
 
+    // エンディング動画（ED.mp4）再生モーダル
+    function openEndingVideo() {
+        if (document.querySelector(".ed-video-overlay")) return;
+
+        const videoOverlay = document.createElement("div");
+        videoOverlay.className = "ed-video-overlay";
+        videoOverlay.innerHTML = `
+            <div class="ed-video-wrapper">
+                <video id="edVideoPlayer" src="ED.mp4" controls playsinline preload="auto"></video>
+            </div>
+            <button type="button" class="ed-video-close-btn">コレクションに戻る</button>
+        `;
+        document.body.appendChild(videoOverlay);
+
+        const video = videoOverlay.querySelector("#edVideoPlayer");
+
+        function closeVideo() {
+            video.pause();
+            videoOverlay.classList.remove("show");
+            setTimeout(() => videoOverlay.remove(), 400);
+        }
+
+        videoOverlay.querySelector(".ed-video-close-btn").addEventListener("click", closeVideo);
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                videoOverlay.classList.add("show");
+                video.play().catch(() => {});
+            });
+        });
+    }
+
     function showCompleteOverlay() {
         if (document.querySelector(".complete-overlay")) return;
 
@@ -445,26 +514,31 @@ window.addEventListener("DOMContentLoaded", () => {
                 <h3>コンプリート！</h3>
                 <div class="complete-area">${areaName}</div>
                 <p class="complete-desc">
-                    すべてのスポットを巡りました。<br>
-                    2040年の記憶が、すべて解放されました。
+                    すべてのピースが集まりました。<br>
+                    エンディング映像が解放されました！
                 </p>
-                <button type="button" class="complete-btn">記録を見る</button>
+                <button type="button" class="complete-btn">エンディングを見る ▶</button>
             </div>
         `;
         document.body.appendChild(overlay);
 
-        function close() {
+        let videoOpened = false;
+
+        function startEnding() {
+            if (videoOpened) return;
+            videoOpened = true;
             overlay.classList.remove("show");
-            setTimeout(() => overlay.remove(), 500);
+            setTimeout(() => overlay.remove(), 400);
+            openEndingVideo();
         }
-        overlay.querySelector(".complete-btn").addEventListener("click", close);
-        overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) close();
-        });
+
+        overlay.querySelector(".complete-btn").addEventListener("click", startEnding);
 
         requestAnimationFrame(() => {
             requestAnimationFrame(() => overlay.classList.add("show"));
         });
+
+        setTimeout(startEnding, 2800);
     }
 
     window.celebrateCompletion = function (isNew) {
