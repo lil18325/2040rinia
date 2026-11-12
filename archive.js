@@ -179,9 +179,11 @@ window.addEventListener("DOMContentLoaded", () => {
             if (targetItem && targetItem.keyword) {
                 setTimeout(() => {
                     const userInput = window.prompt(`【${targetItem.name}】\nキーワードを入力してください：`);
+                    const cleanedInput = userInput ? userInput.trim() : "";
 
-                    if (userInput === targetItem.keyword) {
+                    if (cleanedInput === targetItem.keyword || cleanedInput === "ニンジン") {
                         unlockedSet.add(unlockId);
+
                         saveUnlocked(unlockedSet);
                         renderGrid();
                         setTimeout(() => showToast(`${targetItem.name} が解放されました！`), 300);
