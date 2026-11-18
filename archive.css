@@ -146,6 +146,7 @@ article {
     object-fit: cover;
 }
 
+
 /* --- プログレスバー 100% 達成時エフェクト --- */
 .progress-bar-container.completed {
     border-color: #ffd700;

@@ -24,7 +24,6 @@ const SCULPTURES = [
         image: "images/pace-03.png",
         story: "重い荷物もあっという間に届けてくれます。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "ドローン"
     },
     {
         id: 4,
@@ -140,6 +139,7 @@ function renderGrid() {
         }
         grid.appendChild(itemDiv);
     });
+    
 
     const count = unlockedSet.size;
     const progressFill = document.getElementById("progressFill");
