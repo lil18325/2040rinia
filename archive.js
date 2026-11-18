@@ -24,7 +24,7 @@ const SCULPTURES = [
         image: "images/pace-03.png",
         story: "重い荷物もあっという間に届けてくれます。",
         link: "https://www.yamaha-motor.co.jp/mobilites/",
-        keyword: "にんじん"
+        keyword: "ドローン"
     },
     {
         id: 4,
