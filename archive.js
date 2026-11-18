@@ -244,7 +244,7 @@ window.addEventListener("DOMContentLoaded", () => {
         padding: 36px 26px 28px;
         text-align: center;
         background: #fffdf7;
-        border: 2px solid #0D8B80;
+        border: 2px solid #A969ED;
         border-radius: 16px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
         transform: scale(0.8) translateY(20px);
@@ -272,9 +272,9 @@ window.addEventListener("DOMContentLoaded", () => {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background: linear-gradient(135deg, #0D8B80, #14a99c);
+        background: linear-gradient(135deg, #A969ED, #F2D8F1);
         color: #fff;
-        box-shadow: 0 0 0 4px #fffdf7, 0 0 0 6px #0D8B80, 0 6px 16px rgba(0,0,0,.25);
+        box-shadow: 0 0 0 4px #fffdf7, 0 0 0 6px #A969ED, 0 6px 16px rgba(0,0,0,.25);
         animation: sealPop 0.7s cubic-bezier(0.2, 1.5, 0.4, 1) 0.25s backwards;
     }
     .complete-seal .seal-main {
@@ -308,7 +308,7 @@ window.addEventListener("DOMContentLoaded", () => {
         font-size: 13px;
         font-weight: bold;
         color: #fff;
-        background: #0D8B80;
+        background: #A969ED;
         border-radius: 999px;
     }
     .complete-desc {
@@ -326,13 +326,13 @@ window.addEventListener("DOMContentLoaded", () => {
         font-size: 15px;
         font-weight: bold;
         color: #fff;
-        background: #0D8B80;
+        background: #A969ED;
         border: none;
         border-radius: 50px;
         cursor: pointer;
         transition: transform 0.1s ease, background-color 0.2s ease;
     }
-    .complete-btn:hover { background: #0b7a70; }
+    .complete-btn:hover { background: #A969ED; }
     .complete-btn:active { transform: translateY(2px); }
 
     /* --- エンディング動画モーダル --- */
@@ -361,7 +361,7 @@ window.addEventListener("DOMContentLoaded", () => {
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-        border: 2px solid #0D8B80;
+        border: 2px solid #A969ED;
     }
     .ed-video-wrapper video {
         display: block;
@@ -376,14 +376,14 @@ window.addEventListener("DOMContentLoaded", () => {
         font-size: 14px;
         font-weight: bold;
         color: #fff;
-        background: #0D8B80;
+        background: #A969ED;
         border: none;
         border-radius: 50px;
         cursor: pointer;
         transition: background-color 0.2s ease;
     }
     .ed-video-close-btn:hover {
-        background: #0b7a70;
+        background: #A969ED;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -407,7 +407,7 @@ window.addEventListener("DOMContentLoaded", () => {
         resize();
         window.addEventListener("resize", resize);
 
-        const colors = ["#0D8B80", "#14a99c", "#ffd700", "#ffffff", "#e99a25"];
+        const colors = ["#A969ED", "#F2D8F1", "#ffd700", "#ffffff", "#e99a25"];
         const W = window.innerWidth;
         const pieces = [];
 

@@ -3,7 +3,7 @@
 :root {
     --content-width: 402px;
     --ink: #1a1a1a;
-    --primary: #0D8B80;
+    --primary: #A969ED;
 }
 
 * {
@@ -18,11 +18,10 @@ html {
 
 body {
     min-width: 320px;
+    min-height: 100vh;
     color: var(--ink);
     font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-    background:
-        url("../images/footer_gradation.png") center bottom / 100% auto no-repeat,
-        #e9e7e0 url("../images/body_backgraudimage.png") center top / 100% auto;
+    background: linear-gradient(180deg, #91d7f6 0%, #a5e5f8 50%, #b9f8e2 100%);
     vertical-align: bottom;
     position: relative;
 }
@@ -36,9 +35,11 @@ main {
     position: relative;
     flex-direction: column;
     width: min(100%, var(--content-width));
+    min-height: 100vh;
     margin: 0 auto;
     z-index: 10;
-    background-color: #fff;
+    background: linear-gradient(180deg, #91d7f6 0%, #a5e5f8 50%, #b9f8e2 100%);
+    box-shadow: 0 0 24px 8px rgba(255, 255, 255, 0.9);
     padding-bottom: 20px;
     box-sizing: border-box;
 }
@@ -51,7 +52,6 @@ main {
     padding: 16px 23px 25px;
     display: flex;
     justify-content: center;
-    background-color: #87ecf9;
     position: relative;
     z-index: 10;
     margin-bottom: 25px;
@@ -154,7 +154,7 @@ article {
 }
 
 .progress-bar-fill.completed {
-    background: linear-gradient(90deg, #0D8B80, #52c2b6, #ffd700, #0D8B80);
+    background: linear-gradient(90deg, #A969ED, #F2D8F1, #60d9ea, #A969ED);
     background-size: 200% 100%;
     animation: shine 2s linear infinite;
 }
@@ -340,10 +340,10 @@ article {
     justify-content: center;
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid #0D8B80;
+    border: 2px solid #A969ED;
     border-radius: 50px;
     background-color: #ffffff;
-    color: #0D8B80;
+    color: #A969ED;
     text-decoration: none;
     box-sizing: border-box;
     transition: background-color 0.2s ease, transform 0.1s ease;
