@@ -170,6 +170,7 @@ window.addEventListener("DOMContentLoaded", () => {
     renderGrid();
 
     const urlParams = new URLSearchParams(window.location.search);
+    
     const unlockId = parseInt(urlParams.get('unlock'));
 
     if (unlockId && !isNaN(unlockId) && unlockId >= 1 && unlockId <= TOTAL_ITEMS) {

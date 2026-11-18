@@ -38,11 +38,20 @@ main {
     min-height: 100vh;
     margin: 0 auto;
     z-index: 10;
-    background: linear-gradient(180deg, #91d7f6 0%, #a5e5f8 50%, #b9f8e2 100%);
-    box-shadow: 0 0 24px 8px rgba(255, 255, 255, 0.9);
+    background: transparent;
+    box-shadow: none;
     padding-bottom: 20px;
     box-sizing: border-box;
 }
+
+/* PC表示（481px以上）のみ main の背景と白グラデの境目を表示 */
+@media (min-width: 481px) {
+    main {
+        background: linear-gradient(180deg, #91d7f6 0%, #a5e5f8 50%, #b9f8e2 100%);
+        box-shadow: 0 0 24px 8px rgba(255, 255, 255, 0.9);
+    }
+}
+
 
 /* =========================================
    エリア名バナー
