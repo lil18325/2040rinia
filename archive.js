@@ -50,14 +50,14 @@ const SCULPTURES = [
     {
         id: 7,
         name: "庭師ロボ",
-        image: "images/pace-08.png",
+        image: "images/pace-07.png",
         story: "彼の手にかかれば手の込んだ木々のお手入れも一瞬です。",
         link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
     {
         id: 8,
         name: "食事提供ロボ",
-        image: "images/pace-07.png",
+        image: "images/pace-08.png",
         story: "栄養抜群な食事を作ってくれる。盛り付けだってお手のもの。",
         link: "https://www.yamaha-motor.co.jp/mobilites/"
     },
