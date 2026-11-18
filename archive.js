@@ -500,7 +500,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (document.querySelector(".complete-overlay")) return;
 
         const banner = document.querySelector(".area-banner");
-        const areaName = banner ? banner.textContent.trim() : "2040年の橋本";
+        const areaName = (banner && banner.textContent.trim()) || "2040橋本未来探査";
 
         const overlay = document.createElement("div");
         overlay.className = "complete-overlay";
