@@ -298,7 +298,7 @@ window.addEventListener("DOMContentLoaded", () => {
         font-size: 21px;
         font-weight: bold;
         letter-spacing: 0.06em;
-        color: #111;
+        color: #414f9d;
         margin-bottom: 10px;
     }
     .complete-area {
@@ -314,7 +314,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .complete-desc {
         font-size: 13px;
         line-height: 1.8;
-        color: #333;
+        color: #414f9d;
         margin-bottom: 22px;
     }
     .complete-btn {

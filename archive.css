@@ -2,7 +2,7 @@
 
 :root {
     --content-width: 402px;
-    --ink: #1a1a1a;
+    --ink: #414f9d;
     --primary: #A969ED;
 }
 
@@ -95,7 +95,7 @@ article {
 .progress-bar-container {
     width: 100%;
     height: 6px;
-    background-color: #bcbcbc;
+    background-color: #fff;
     margin-bottom: 24px;
     border-radius: 4px;
 }
@@ -137,8 +137,7 @@ article {
     font-size: 14px;
     font-weight: bold;
     z-index: 2;
-    color: #111;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
+    color: #414f9d;
 }
 
 .unlocked-img {
@@ -243,7 +242,7 @@ article {
     background: none;
     border: none;
     font-size: 24px;
-    color: #555;
+    color: #414f9d;
     cursor: pointer;
 }
 
@@ -273,14 +272,14 @@ article {
 .popup-no {
     font-size: 12px;
     font-weight: bold;
-    color: #333;
+    color: #414f9d;
 }
 
 .popup-title {
     font-size: 22px;
     font-weight: bold;
     margin-top: 4px;
-    color: #111;
+    color: #414f9d;
 }
 
 .popup-img-wrapper {
@@ -306,14 +305,14 @@ article {
 .info-label {
     font-size: 13px;
     font-weight: bold;
-    color: #333;
+    color: #414f9d;
 }
 
 .story-text {
     margin-top: 8px;
     font-size: 13px;
     line-height: 1.6;
-    color: #1a1a1a;
+    color: #414f9d;
 }
 
 /* =========================================
